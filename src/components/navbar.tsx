@@ -144,9 +144,7 @@ const Navbar = () => {
 							variants={menuLinkAnimations} // When animation is triggered, it will animate the children, so no need to write initial or closed.
 							key={link.url}
 						>
-							<Link href={link.url} className='  '>
-								{link.name}
-							</Link>
+							<Link href={link.url}>{link.name}</Link>
 						</motion.div>
 					))}
 				</motion.div>
