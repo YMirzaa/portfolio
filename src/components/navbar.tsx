@@ -14,32 +14,59 @@ const links = [
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const topVariant = {
-		closed: {
-			rotate: 0,
+	const menuIconAnimations = {
+		topVariant: {
+			closed: {
+				rotate: 0,
+			},
+			opened: {
+				rotate: 45,
+				backgroundColor: "rgb(255,255,255)",
+			},
 		},
-		opened: {
-			rotate: 45,
-			backgroundColor: "rgb(255,255,255)",
+		centerVariant: {
+			closed: {
+				opacity: 1,
+			},
+			opened: {
+				opacity: 0,
+			},
+		},
+		bottomVariant: {
+			closed: {
+				rotate: 0,
+			},
+			opened: {
+				rotate: -45,
+				backgroundColor: "rgb(255,255,255)",
+			},
 		},
 	};
-	const centerVariant = {
+	const menuAnimation = {
 		closed: {
-			opacity: 1,
+			x: "100vw", // This is the position, it will be at the end of the screen
 		},
 		opened: {
+			x: 0, // This is the position, it will be at the start of the screen
+			transition: {
+				when: "beforeChildren",
+				staggerChildren: 0.15,
+				duration: 0.3,
+			},
+		},
+	};
+
+	const menuLinkAnimations = {
+		closed: {
+			x: -50,
 			opacity: 0,
 		},
-	};
-	const bottomVariant = {
-		closed: {
-			rotate: 0,
-		},
 		opened: {
-			rotate: -45,
-			backgroundColor: "rgb(255,255,255)",
+			x: 0,
+			opacity: 1,
 		},
 	};
+
 	return (
 		<nav className='h-full flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 '>
 			<div className='hidden md:flex gap-4 w-1/3'>
@@ -83,21 +110,21 @@ const Navbar = () => {
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<motion.div
-					variants={topVariant}
+					variants={menuIconAnimations.topVariant}
 					animate={isOpen ? "opened" : "closed"}
 					className='w-10 h-1 bg-black flex flex-col origin-left'
 				>
 					{" "}
 				</motion.div>
 				<motion.div
-					variants={centerVariant}
+					variants={menuIconAnimations.centerVariant}
 					animate={isOpen ? "opened" : "closed"}
 					className='w-10 h-1 bg-black flex flex-col'
 				>
 					{" "}
 				</motion.div>
 				<motion.div
-					variants={bottomVariant}
+					variants={menuIconAnimations.bottomVariant}
 					animate={isOpen ? "opened" : "closed"}
 					className='w-10 h-1 bg-black flex flex-col origin-left'
 				>
@@ -106,13 +133,23 @@ const Navbar = () => {
 			</button>
 			{/* MENU LIST */}
 			{isOpen && (
-				<div className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40'>
+				<motion.div
+					variants={menuAnimation}
+					initial='closed'
+					animate='opened'
+					className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40'
+				>
 					{links.map((link) => (
-						<Link key={link.url} href={link.url} className='  '>
-							{link.name}
-						</Link>
+						<motion.div
+							variants={menuLinkAnimations} // When animation is triggered, it will animate the children, so no need to write initial or closed.
+							key={link.url}
+						>
+							<Link href={link.url} className='  '>
+								{link.name}
+							</Link>
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 			)}
 		</nav>
 	);
