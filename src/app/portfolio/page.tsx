@@ -12,7 +12,7 @@ const items = [
 		color: "from-red-300 to-blue-300",
 		title: "AI Platform",
 		desc: "Created an AI Platform to generate image, video, text, code, and music which is connected to Open AI's API.",
-		img: "/project.jpg",
+		img: "/aiDashboard.png",
 		link: "https://github.com/YMirzaa/AI-Platform",
 	},
 	{
@@ -21,7 +21,7 @@ const items = [
 		title: "Employee Management Dashboard",
 		desc: "I developed an Employee Management Dashboard for Internship Project. Used Spring, Next.js and AWS S3.",
 		img: "/project.jpg",
-		link: "https://lama.dev",
+		link: "https://github.com/YMirzaa/Employee-Management-Dashboard",
 	},
 	{
 		id: 3,
@@ -29,7 +29,7 @@ const items = [
 		title: "Nutrikom",
 		desc: "Together with my friend, we created an application for the daily routines of dietitians through digitization.",
 		img: "/project.jpg",
-		link: "https://lama.dev",
+		link: "https://github.com/Nutrikom/web-frontend",
 	},
 	{
 		id: 4,
@@ -37,7 +37,7 @@ const items = [
 		title: "Chat Application With Socket",
 		desc: "A chat application with Java, Spring, and React.js techonologies. Used STOMP.js for the socket connection.",
 		img: "/project.jpg",
-		link: "https://lama.dev",
+		link: "https://github.com/YMirzaa/Socket-Chat",
 	},
 	{
 		id: 5,
@@ -45,7 +45,7 @@ const items = [
 		title: "REVO Mobile App",
 		desc: "My graduation endeavor. I steered the development and upkeep of a mobile app with a blockchain-based vote counting mechanism..",
 		img: "/project.jpg",
-		link: "https://lama.dev",
+		link: "https://senior.ceng.metu.edu.tr/2023/revo/",
 	},
 	{
 		id: 6,
@@ -53,7 +53,7 @@ const items = [
 		title: "Search Engine Caching",
 		desc: "Made a caching system for a search engine. Researched the static term result caching in term-based partition with a friend.",
 		img: "/project.jpg",
-		link: "https://lama.dev",
+		link: "https://github.com/YMirzaa/Search-Engine-CENG778",
 	},
 ];
 
@@ -94,7 +94,7 @@ const PortfolioPage = () => {
 											src={item.img}
 											alt={item.title}
 											layout='fill'
-											objectFit='cover'
+											objectFit='contain'
 										/>
 									</div>
 									<p className='w-80 font-bold  md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]'>
