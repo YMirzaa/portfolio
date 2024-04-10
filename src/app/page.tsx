@@ -25,7 +25,7 @@ export default function Home() {
 				<div className='h-1/2 flex flex-col gap-4 items-center justify-center lg:h-full lg:w-1/2'>
 					{/* TITLE */}
 					<h1 className='text-3xl lg:text-6xl font-black'>
-						Aspiring FullStack Java / React Developer
+						Aspiring Full-Stack Java / React Developer
 					</h1>
 					{/* DESC */}
 					<p className='md:text-xl'>

@@ -33,7 +33,7 @@ const AboutPage = () => {
 						<h1 className='font-bold text-2xl'>BIOGRAPHY</h1>
 						{/* BIOGRAPHY DESC */}
 						<p className='text-lg pb-24'>
-							Hey there, I{"'"}m Yusuf Mirza Altay. Fullstack
+							Hey there, I{"'"}m Yusuf Mirza Altay. Full-Stack
 							development is my thing. I graduated from Middle
 							East Technical University in February 2024 with a
 							GPA of 3.02, and since then, I{"'"}ve been diving

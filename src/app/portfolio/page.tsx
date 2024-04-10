@@ -20,7 +20,7 @@ const items = [
 		color: "from-blue-300 to-violet-300",
 		title: "Employee Management Dashboard",
 		desc: "I developed an Employee Management Dashboard for Internship Project. Used Spring, Next.js and AWS S3.",
-		img: "/project.jpg",
+		img: "/employeeDashboard.png",
 		link: "https://github.com/YMirzaa/Employee-Management-Dashboard",
 	},
 	{
