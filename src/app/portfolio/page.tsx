@@ -23,34 +23,26 @@ const items = [
 		img: "/employeeDashboard.png",
 		link: "https://github.com/YMirzaa/Employee-Management-Dashboard",
 	},
+
 	{
 		id: 3,
 		color: "from-violet-300 to-purple-300",
-		title: "Nutrikom",
-		desc: "Together with my friend, we created an application for the daily routines of dietitians through digitization.",
-		img: "/templatesDetails2.png",
-		private: true,
-		link: "https://github.com/Nutrikom/web-frontend",
-	},
-	{
-		id: 4,
-		color: "from-purple-300 to-red-300",
 		title: "Chat Application With Socket",
 		desc: "A chat application with Java, Spring, and React.js techonologies. Used STOMP.js for the socket connection.",
 		img: "/project.jpg",
 		link: "https://github.com/YMirzaa/Socket-Chat",
 	},
 	{
-		id: 5,
-		color: "from-red-300 to-blue-300",
+		id: 4,
+		color: "from-purple-300 to-red-300",
 		title: "REVO Mobile App",
 		desc: "My graduation endeavor. I steered the development and upkeep of a mobile app with a blockchain-based vote counting mechanism..",
 		img: "/project.jpg",
 		link: "https://senior.ceng.metu.edu.tr/2023/revo/",
 	},
 	{
-		id: 6,
-		color: "from-blue-300 to-violet-300",
+		id: 5,
+		color: "from-red-300 to-blue-300",
 		title: "Search Engine Caching",
 		desc: "Made a caching system for a search engine. Researched the static term result caching in term-based partition with a friend.",
 		img: "/project.jpg",
@@ -64,7 +56,7 @@ const PortfolioPage = () => {
 
 	// Value between 0 and 1, 0 to 100% are the transformation values
 
-	const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
+	const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
 
 	return (
 		<motion.div
