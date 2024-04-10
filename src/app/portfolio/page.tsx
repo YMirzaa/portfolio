@@ -28,7 +28,8 @@ const items = [
 		color: "from-violet-300 to-purple-300",
 		title: "Nutrikom",
 		desc: "Together with my friend, we created an application for the daily routines of dietitians through digitization.",
-		img: "/project.jpg",
+		img: "/templatesDetails2.png",
+		private: true,
 		link: "https://github.com/Nutrikom/web-frontend",
 	},
 	{
@@ -106,11 +107,13 @@ const PortfolioPage = () => {
 												See Demo
 											</button>
 										</Link> */}
-										<Link href={item.link}>
-											<button className='p-2 text-sm md:p-4 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold rounded'>
-												Check Source Code
-											</button>
-										</Link>
+										{!item.private && (
+											<Link href={item.link}>
+												<button className='p-2 text-sm md:p-4 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold rounded'>
+													Check Source Code
+												</button>
+											</Link>
+										)}
 									</div>
 								</div>
 							</div>
