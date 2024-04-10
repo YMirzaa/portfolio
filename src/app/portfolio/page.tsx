@@ -27,18 +27,18 @@ const items = [
 	{
 		id: 3,
 		color: "from-violet-300 to-purple-300",
-		title: "Chat Application With Socket",
-		desc: "A chat application with Java, Spring, and React.js techonologies. Used STOMP.js for the socket connection.",
-		img: "/project.jpg",
-		link: "https://github.com/YMirzaa/Socket-Chat",
+		title: "REVO Mobile App",
+		desc: "My graduation endeavor. I steered the development and upkeep of a mobile app with a blockchain-based vote counting mechanism..",
+		img: "/revo.png",
+		link: "https://senior.ceng.metu.edu.tr/2023/revo/",
 	},
 	{
 		id: 4,
 		color: "from-purple-300 to-red-300",
-		title: "REVO Mobile App",
-		desc: "My graduation endeavor. I steered the development and upkeep of a mobile app with a blockchain-based vote counting mechanism..",
+		title: "Chat Application With Socket",
+		desc: "A chat application with Java, Spring, and React.js techonologies. Used STOMP.js for the socket connection.",
 		img: "/project.jpg",
-		link: "https://senior.ceng.metu.edu.tr/2023/revo/",
+		link: "https://github.com/YMirzaa/Socket-Chat",
 	},
 	{
 		id: 5,
@@ -99,13 +99,11 @@ const PortfolioPage = () => {
 												See Demo
 											</button>
 										</Link> */}
-										{!item.private && (
-											<Link href={item.link}>
-												<button className='p-2 text-sm md:p-4 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold rounded'>
-													Check Source Code
-												</button>
-											</Link>
-										)}
+										<Link href={item.link}>
+											<button className='p-2 text-sm md:p-4 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold rounded'>
+												Check Source
+											</button>
+										</Link>
 									</div>
 								</div>
 							</div>
